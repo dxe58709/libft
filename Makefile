@@ -6,33 +6,35 @@
 #    By: nsakanou <nsakanou@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/22 15:18:27 by nsakanou          #+#    #+#              #
-#    Updated: 2023/05/22 16:07:40 by nsakanou         ###   ########.fr        #
+#    Updated: 2023/05/24 15:02:17 by nsakanou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = gcc
 CFLAG = -Wall -Wextra -Werror
 
-SRCS =	ft_isalpha.c ft_isdigit.c ft_isascii.c
-		# ft_strlen.c \
+SRCS =	ft_toupper.c \
+		ft_tolower.c \
+		ft_isalpha.c \
+		ft_isdigit.c \
+		ft_isascii.c \
+		ft_isalnum.c \
+		ft_isalpha.c \
+		ft_isprint.c \
+		ft_strlen.c \
+		ft_bzero.c \
+		ft_memset.c \
+		ft_memchr.c \
+		ft_strchr.c \
 		# ft_strlcpy.c \
 		# ft_strlcat.c \
-		# ft_strchr.c \
 		# ft_strrchr.c \
 		# ft_strnstr.c \
 		# ft_strncmp.c \
-		# ft_bzero.c \
-		# ft_memset.c \
 		# ft_memcpy.c \
 		# ft_memmove.c \
-		# ft_memchr.c \
 		# ft_memcmp.c \
 		# ft_atoi.c \
-		# ft_isalpha.c \
-		# ft_isalnum.c \
-		# ft_isprint.c \
-		# ft_toupper.c \
-		# ft_tolower.c \
 		# ft_calloc.c \
 		# ft_strdup.c \
 		# ft_substr.c \

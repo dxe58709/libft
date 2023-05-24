@@ -1,18 +1,13 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nsakanou <nsakanou@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/18 09:55:01 by nsakanou          #+#    #+#             */
-/*   Updated: 2023/05/18 12:23:27 by nsakanou         ###   ########.fr       */
+/*   Created: 2023/05/18 11:52:24 by nsakanou          #+#    #+#             */
+/*   Updated: 2023/05/18 11:52:24 by nsakanou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(int c)
-{
-	if (c >= '0' && c <= '9')
-		return (1);
-	return (0);
-}
+void *ft_memmove(void *dst, const void *src, size_t len)

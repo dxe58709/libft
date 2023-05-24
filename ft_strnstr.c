@@ -1,18 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nsakanou <nsakanou@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/18 09:55:01 by nsakanou          #+#    #+#             */
-/*   Updated: 2023/05/18 12:23:27 by nsakanou         ###   ########.fr       */
+/*   Created: 2023/05/18 11:54:32 by nsakanou          #+#    #+#             */
+/*   Updated: 2023/05/19 16:09:18 by nsakanou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(int c)
-{
-	if (c >= '0' && c <= '9')
-		return (1);
-	return (0);
-}
+#include <string.h>
+
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
