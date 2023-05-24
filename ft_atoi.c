@@ -39,7 +39,7 @@ int ft_to..();
 // 	nb = ft_to_number(str, i);
 // 	return (nb * count);
 // }
-
+// test
 
 // int	ft_to_number(char *str, int i)
 // {
