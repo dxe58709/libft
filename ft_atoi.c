@@ -6,7 +6,7 @@
 /*   By: nsakanou <nsakanou@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 11:53:50 by nsakanou          #+#    #+#             */
-/*   Updated: 2023/05/19 16:12:45 by nsakanou         ###   ########.fr       */
+/*   Updated: 2023/05/24 15:31:08 by nsakanou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,6 @@ int ft_to..();
 // 	nb = ft_to_number(str, i);
 // 	return (nb * count);
 // }
-// test
 
 // int	ft_to_number(char *str, int i)
 // {
