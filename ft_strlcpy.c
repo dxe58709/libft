@@ -29,7 +29,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	return (i);
 }
 
-
+/*
 #include <stdio.h>
 
 int	main()
@@ -48,4 +48,4 @@ int	main()
 
 	return (0);
 }
-
+*/
