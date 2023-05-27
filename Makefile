@@ -6,7 +6,7 @@
 #    By: nsakanou <nsakanou@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/22 15:18:27 by nsakanou          #+#    #+#              #
-#    Updated: 2023/05/26 10:27:38 by nsakanou         ###   ########.fr        #
+#    Updated: 2023/05/27 15:36:41 by nsakanou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,7 @@ SRCS =	ft_toupper.c \
 		ft_strncmp.c \
 		ft_strlcpy.c \
 		ft_strlcat.c \
-		# ft_strrchr.c \
+		ft_strrchr.c \
 		# ft_strnstr.c \
 		# ft_memmove.c \
 		# ft_atoi.c \

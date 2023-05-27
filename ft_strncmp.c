@@ -6,7 +6,7 @@
 /*   By: nsakanou <nsakanou@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 11:54:24 by nsakanou          #+#    #+#             */
-/*   Updated: 2023/05/26 10:26:13 by nsakanou         ###   ########.fr       */
+/*   Updated: 2023/05/27 13:20:59 by nsakanou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,29 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	size_t	i;
 
 	i = 0;
-	if (i == n)
-		return (0);
-	while (*s1 == *s2 && i < n)
+	while (i < n)
 	{
-		if (*s1 == '\0')
-			return (0);
-		s1++;
-		s2++;
+		if (s1[i] != s2[i])
+			return (((unsigned char)s1[i]) - ((unsigned char)s2[i]));
 		i++;
 	}
-	return ((unsigned char)(*s1) - (unsigned char)(*s2));
+	return (0);
 }
+
+/*
+#include <stdio.h>
+
+int	main()
+{
+	char *str = "libft-42tokyo";
+	printf("%d\n", strncmp(str,"libft", 5));
+	printf("%d\n", ft_strncmp(str,"libft", 5));
+
+	printf("%d\n", strncmp(str,"i", 5));
+	printf("%d\n", ft_strncmp(str,"i", 5));
+
+	printf("%d\n", strncmp(str,"libft-42tokyoi", 15));
+	printf("%d\n", ft_strncmp(str,"libft-42tokyoi", 15));
+
+}
+*/

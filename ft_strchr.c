@@ -6,7 +6,7 @@
 /*   By: nsakanou <nsakanou@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 11:52:31 by nsakanou          #+#    #+#             */
-/*   Updated: 2023/05/24 16:02:55 by nsakanou         ###   ########.fr       */
+/*   Updated: 2023/05/27 14:46:57 by nsakanou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strchr(const char *s, int c)
 {
 	char	chr;
-
+	
 	chr = (char)c;
 	if (ft_isascii(chr) == 0)
 		return ((char *)s);
@@ -27,6 +27,7 @@ char	*ft_strchr(const char *s, int c)
 	}
 	return (NULL);
 }
+
 /*
 #include <stdio.h>
 int main ()
