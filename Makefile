@@ -32,8 +32,8 @@ SRCS =	ft_toupper.c \
 		ft_strlcpy.c \
 		ft_strlcat.c \
 		ft_strrchr.c \
+		ft_memmove.c \
 		# ft_strnstr.c \
-		# ft_memmove.c \
 		# ft_atoi.c \
 		# ft_calloc.c \
 		# ft_strdup.c \
