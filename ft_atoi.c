@@ -6,49 +6,53 @@
 /*   By: nsakanou <nsakanou@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 11:53:50 by nsakanou          #+#    #+#             */
-/*   Updated: 2023/05/24 15:31:08 by nsakanou         ###   ########.fr       */
+/*   Updated: 2023/05/29 16:24:44 by nsakanou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libht.h"
+#include "libft.h"
 
-int ft_to..();
+int ft_atoi(const char *str)
+{
+	int		i;
+	long	nb;
+	int		count;
 
-// int	ft_atoi(char *str)
-// {
-// 	int	i;
-// 	int	nb;
-// 	int	count;
+	i = 0;
+	nb = 0;
+	count = 1;
+	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
+		i++;
+	while (str[i] == '-' || str[i] == '+')
+	{
+		if (ft_isdigit(str[i + 1]) == 0)
+			return (0);
+		else if (str[i] == '-')
+			count *= -1;
+		i++;
+	}
+	while (ft_isdigit(str[i]))
+	{
+		if (count == 1 && ((nb > LONG_MAX / 10) ||
+				((nb == LONG_MAX / 10) && (str[i] - '0') > LONG_MAX % 10)))
+			return ((int)LONG_MAX);
+		else if (count == -1 && ((-nb < LONG_MIN / 10) ||
+					((-nb == LONG_MIN / 10) && -(str[i] - '0') < LONG_MIN % 10)))
+			return ((int)LONG_MIN);
+		nb = nb * 10 + (str[i] - '0');
 
-// 	i = 0;
-// 	nb = 0;
-// 	count = 1;
-// 	while (str[i] == '\t' || str[i] == '\n' || str[i] == '\v' || str[i] == '\f'
-// 		|| str[i] == '\r' || str[i] == ' ')
-// 	{
-// 		i++;
-// 	}
-// 	while (str[i] == '-' || str[i] == '+')
-// 	{
-// 		if (str[i] == '-')
-// 		{
-// 			count *= -1;
-// 		}
-// 		i++;
-// 	}
-// 	nb = ft_to_number(str, i);
-// 	return (nb * count);
-// }
+		i++;
+	}
+	return (nb * count);
+}
+/*
+#include <libc.h>
 
-// int	ft_to_number(char *str, int i)
-// {
-// 	int	nb;
+int main()
+{
+	int ex = atoi("-9223372036854775809");
+	int ac = ft_atoi(")922337203685477580v8";
 
-// 	nb = 0;
-// 	while (str[i] >= '0' && str[i] <= '9')
-// 	{
-// 		nb = nb * 10 + str[i] - '0';
-// 		i++;
-// 	}
-// 	return (nb);
-// }
+	printf("ex: %d\n", ex);
+	printf("ac: %d\n", ac);
+}*/
