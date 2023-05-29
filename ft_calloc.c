@@ -18,11 +18,10 @@ void	*ft_calloc(size_t count, size_t size)
 	
 	if (count == 0 || size == 0)
 	{
-		new = (void *)malloc(1);
-		ft_bzero(new, 1);
-		return (new);
+		count = 1;
+		size = 1;
 	}
-	if (size >= SIZE_MAX / count)
+	if (size > SIZE_MAX / count)
 		return (0);
 	new = (void *)malloc(count * size);
 	if (new == NULL)

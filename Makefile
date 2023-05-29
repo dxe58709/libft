@@ -37,8 +37,8 @@ SRCS =	ft_toupper.c \
 		ft_strnstr.c \
 		ft_strdup.c \
 		ft_calloc.c \
-		# ft_substr.c \
-		# ft_strjoin.c \
+		ft_substr.c \
+		ft_strjoin.c \
 		# ft_strtrim.c \
 		# ft_split.c \
 		# ft_itoa.c \
