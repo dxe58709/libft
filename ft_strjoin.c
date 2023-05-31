@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nsakanou <nsakanou@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/05/31 15:01:01 by nsakanou          #+#    #+#             */
+/*   Updated: 2023/05/31 17:28:07 by nsakanou         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
@@ -30,13 +42,13 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	return (new);
 }
 
-#include "stdio.h"
+// #include "stdio.h"
 
-int	main()
-{
-	char const	*s1 = "abcde";
-	char const	*s2 = "123456789";
+// int	main()
+// {
+// 	char const	*s1 = "abcde";
+// 	char const	*s2 = "123456789";
 
-	printf("%s\n", ft_strjoin(s1, s2));
-	return (0);
-}
+// 	printf("%s\n", ft_strjoin(s1, s2));
+// 	return (0);
+// }

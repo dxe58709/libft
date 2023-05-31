@@ -1,30 +1,45 @@
-void	ft_itoa(int n, char *buffer, size_t buffer_size)
-{
-	int		num_len;
-	int		sign;
-	unsigned int num;
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nsakanou <nsakanou@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/05/31 17:29:12 by nsakanou          #+#    #+#             */
+/*   Updated: 2023/05/31 19:40:37 by nsakanou         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
+#include "libft.h"
+
+void	*ft_itoa(int n)
+{
+	size_t			len;
+	int				count;
+	unsigned int	nb;
+	char			*new;
+
+	len = 
+	new = (char *)malloc((len + 1) * sizeof(char));
+	if (new == NULL)
+		return (NULL);
+	new[len] = '\0';
 	if (n < 0)
 	{
-		sign = -1;
-		num = -n;
+		count = -1;
+		nb = -n;
 	}
 	else
 	{
-		sign = 1;
-		num = n;
+		count = 1;
+		nb = n;
 	}
-	num_len = get_num_len(num);
-	if (sign == -1)
-		num_len++;
-	if (buffer_size < (num_len + 1))
-		return;  // バッファサイズが足りない場合は何もしないかエラー処理を行う
-	buffer[num_len] = '\0';
-	while (num_len--)
+	if (count == -1)
+		new[0] = '-';
+	while (len--)
 	{
-		buffer[num_len] = num % 10 + '0';
-		num /= 10;
+		new[len + (count == -1)] = nb % 10 + '0';
+		nb /= 10;
 	}
-	if (sign == -1)
-		buffer[0] = '-';
+	return (new);
 }

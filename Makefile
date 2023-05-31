@@ -6,7 +6,7 @@
 #    By: nsakanou <nsakanou@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/22 15:18:27 by nsakanou          #+#    #+#              #
-#    Updated: 2023/05/29 18:56:09 by nsakanou         ###   ########.fr        #
+#    Updated: 2023/05/31 19:01:34 by nsakanou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,16 +39,16 @@ SRCS =	ft_toupper.c \
 		ft_calloc.c \
 		ft_substr.c \
 		ft_strjoin.c \
-		# ft_strtrim.c \
+		ft_strtrim.c \
+		ft_striteri.c \
+		ft_putchar_fd.c \
+		ft_putstr_fd.c \
+		ft_putendl_fd.c \
+		ft_putnbr_fd.c \
+		ft_strmapi.c \
+		ft_itoa.c \
 		# ft_split.c \
-		# ft_itoa.c \
-		# ft_strmapi.c \
-		# ft_striteri.c \
-		# ft_putchar_fd.c \
-		# ft_putstr_fd.c \
-		# ft_putendl_fd.c \
-		# ft_putnbr_fd.c 
-		
+	
 B_SRCS=	ft_lstnew.c \
 	 ft_lstadd_front.c \
 	 ft_lstsize.c \
