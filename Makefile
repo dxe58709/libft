@@ -6,7 +6,7 @@
 #    By: nsakanou <nsakanou@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/22 15:18:27 by nsakanou          #+#    #+#              #
-#    Updated: 2023/05/31 19:01:34 by nsakanou         ###   ########.fr        #
+#    Updated: 2023/06/01 19:18:32 by nsakanou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,7 +47,7 @@ SRCS =	ft_toupper.c \
 		ft_putnbr_fd.c \
 		ft_strmapi.c \
 		ft_itoa.c \
-		# ft_split.c \
+		ft_split.c \
 	
 B_SRCS=	ft_lstnew.c \
 	 ft_lstadd_front.c \

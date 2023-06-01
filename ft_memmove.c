@@ -6,11 +6,34 @@
 /*   By: nsakanou <nsakanou@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 11:52:24 by nsakanou          #+#    #+#             */
-/*   Updated: 2023/05/28 17:40:29 by nsakanou         ###   ########.fr       */
+/*   Updated: 2023/06/01 19:41:03 by nsakanou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+void	judge(unsigned char *dst, unsigned char *src, size_t len)
+{
+	size_t	i;
+
+	i = 0;
+	if (dst > src)
+	{
+		while (len > 0)
+		{
+			dst[len - 1] = src[len - 1];
+			len--;
+		}
+	}
+	else
+	{
+		while (i < len)
+		{
+			dst[i] = src[i];
+			i++;
+		}
+	}
+}
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
@@ -23,22 +46,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	i = 0;
 	if (d == s)
 		return (d);
-	if (d > s)
-	{
-		while (len > 0)
-		{
-			d[len - 1] = s[len - 1];
-			len--;
-		}
-	}
-	else
-	{
-		while (i < len)
-		{
-			d[i] = s[i];
-			i++;
-		}
-	}
+	judge(d, s, len);
 	return (d);
 }
 /*

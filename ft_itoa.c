@@ -6,20 +6,30 @@
 /*   By: nsakanou <nsakanou@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 17:29:12 by nsakanou          #+#    #+#             */
-/*   Updated: 2023/05/31 19:40:37 by nsakanou         ###   ########.fr       */
+/*   Updated: 2023/06/01 19:35:08 by nsakanou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_itoa(int n)
+static int	get_num(int n)
+{
+	int	len;
+
+	len = 1;
+	while (n /= 10)
+		len++;
+	return (len);
+}
+
+char	*ft_itoa(int n)
 {
 	size_t			len;
 	int				count;
 	unsigned int	nb;
 	char			*new;
 
-	len = 
+	len = get_num(n);
 	new = (char *)malloc((len + 1) * sizeof(char));
 	if (new == NULL)
 		return (NULL);
