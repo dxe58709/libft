@@ -6,11 +6,12 @@
 #    By: nsakanou <nsakanou@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/22 15:18:27 by nsakanou          #+#    #+#              #
-#    Updated: 2023/06/01 19:18:32 by nsakanou         ###   ########.fr        #
+#    Updated: 2023/06/04 15:56:04 by nsakanou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CC = gcc
+NAME = libft.a
+CC = cc
 CFLAG = -Wall -Wextra -Werror
 
 SRCS =	ft_toupper.c \
@@ -60,19 +61,26 @@ B_SRCS=	ft_lstnew.c \
 	 ft_lstmap.c \
 	 
 OBJS = $(SRCS:.c=.o)
+B_OBJS = $(SRCS:.c=.o)
 
-NAME = libft.a
+ifdef WITH_BONUS
+	OBJS += $(B_OBJS)
+endif
 
 all : $(NAME)
 
-%.o : %.c
-	$(CC) $(CFLAGS) -c $< -o $@
-
 $(NAME) : $(OBJS)
 	ar rcs $(NAME) $(OBJS)
+
+%.o : %.c
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	rm -f $(OBJS)
 fclean: clean
 	rm -f $(NAME)
+
+bonus:
+	make WITH_BOUNUS=1
+
 re: fclean all

@@ -6,7 +6,7 @@
 /*   By: nsakanou <nsakanou@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 11:52:22 by nsakanou          #+#    #+#             */
-/*   Updated: 2023/06/01 19:36:22 by nsakanou         ###   ########.fr       */
+/*   Updated: 2023/06/04 12:27:26 by nsakanou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	const unsigned char	*s;
 	size_t				i;
 
+	if (!dst && !src)
+		return (NULL);
 	d = (unsigned char *)dst;
 	s = (const unsigned char *)src;
 	i = 0;

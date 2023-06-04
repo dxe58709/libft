@@ -6,7 +6,7 @@
 /*   By: nsakanou <nsakanou@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 11:54:24 by nsakanou          #+#    #+#             */
-/*   Updated: 2023/05/27 13:20:59 by nsakanou         ###   ########.fr       */
+/*   Updated: 2023/06/04 12:12:29 by nsakanou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		if (s1[i] != s2[i])
+		if (s1[i] != s2[i] || s1[i] == '\0')
 			return (((unsigned char)s1[i]) - ((unsigned char)s2[i]));
 		i++;
 	}

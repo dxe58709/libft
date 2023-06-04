@@ -6,7 +6,7 @@
 /*   By: nsakanou <nsakanou@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 11:52:28 by nsakanou          #+#    #+#             */
-/*   Updated: 2023/05/22 18:03:54 by nsakanou         ###   ########.fr       */
+/*   Updated: 2023/06/04 12:07:19 by nsakanou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,15 @@
 void	*ft_memset(void *buf, int ch, size_t n)
 {
 	unsigned char	*p;
-	unsigned char	byteValue;
+	unsigned char	byte_value;
 	size_t			i;
 
 	p = buf;
-	byteValue = (unsigned char)ch;
+	byte_value = (unsigned char)ch;
 	i = 0;
 	while (i < n)
 	{
-		p[i] = byteValue;
+		p[i] = byte_value;
 			i++;
 	}
 	return (buf);
