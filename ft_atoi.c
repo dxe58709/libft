@@ -12,46 +12,44 @@
 
 #include "libft.h"
 
+static int	ft_judge(const char *str, int *count)
+{
+	int	i;
+
+	i = 0;	
+	while (str[i] == '-' || str[i] == '+')
+	{
+		if (ft_isdigit(str[i + 1]) == 0)
+			return (0);
+		else if (str[i] == '-')
+			*count *= -1;
+		i++;
+	}	
+	return (i);
+}
+
 int	ft_atoi(const char *str)
 {
-	int		i;
+	int	i;
 	long	nb;
-	int		count;
+	int	count;
 
 	i = 0;
 	nb = 0;
 	count = 1;
 	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
 		i++;
-	while (str[i] == '-' || str[i] == '+')
-	{
-		if (ft_isdigit(str[i + 1]) == 0)
-			return (0);
-		else if (str[i] == '-')
-			count *= -1;
-		i++;
-	}
+	i = ft_judge(str + i, &count);
 	while (ft_isdigit(str[i]))
 	{
-		if (count == 1 && ((nb > LONG_MAX / 10)
-				|| ((nb == LONG_MAX / 10) && (str[i] - '0') > LONG_MAX % 10)))
-			return ((int)LONG_MAX);
-		else if (count == -1 && ((-nb < LONG_MIN / 10)
-				|| ((-nb == LONG_MIN / 10) && -(str[i] - '0') < LONG_MIN % 10)))
-			return ((int)LONG_MIN);
-		nb = nb * 10 + (str[i] - '0');
+		 if (count == 1 && ((nb > LONG_MAX / 10)
+        		      || ((nb == LONG_MAX / 10) && (str[i] - '0') > LONG_MAX % 10)))
+        	        return ((int)LONG_MAX);
+    		 else if (count == -1 && ((-nb < LONG_MIN / 10)
+                	        || ((-nb == LONG_MIN / 10) && -(str[i] - '0') < LONG_MIN % 10))) 
+               		 return ((int)LONG_MIN);nb = nb * 10 + (str[i] - '0');
 		i++;
 	}
 	return (nb * count);
 }
-/*
-#include <libc.h>
 
-int main()
-{
-	int ex = atoi("-9223372036854775809");
-	int ac = ft_atoi(")922337203685477580v8";
-
-	printf("ex: %d\n", ex);
-	printf("ac: %d\n", ac);
-}*/

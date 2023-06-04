@@ -16,14 +16,16 @@ void	*ft_memchr(const void *s, int c, size_t n)
 {
 	unsigned char	*ptr;
 	unsigned char	chr;
-	size_t			i;
+	size_t		i;
 
 	ptr = (unsigned char *)s;
 	chr = (unsigned char)c;
 	i = 0;
-	if (ft_isascii(chr) == 0)
+	if (s == NULL)
+		return (NULL);
+	if (ft_isascii(chr) == 0 && chr != '\0')
 		return (ptr + i);
-	while (i < n || chr == '\0')
+	while (i < n || ptr[i] != '\0')
 	{
 		if (ptr[i] == chr)
 			return (ptr + i);
