@@ -6,7 +6,7 @@
 #    By: nsakanou <nsakanou@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/22 15:18:27 by nsakanou          #+#    #+#              #
-#    Updated: 2023/06/04 15:56:04 by nsakanou         ###   ########.fr        #
+#    Updated: 2023/06/05 20:51:40 by nsakanou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,17 +51,17 @@ SRCS =	ft_toupper.c \
 		ft_split.c \
 	
 B_SRCS=	ft_lstnew.c \
-	 ft_lstadd_front.c \
-	 ft_lstsize.c \
-	 ft_lstlast.c \
-	 ft_lstadd_back.c \
-	 ft_lstdelone.c \
-	 ft_lstclear.c \
-	 ft_lstiter.c \
-	 ft_lstmap.c \
+		ft_lstadd_front.c \
+		ft_lstsize.c \
+		ft_lstlast.c \
+		ft_lstadd_back.c \
+		ft_lstdelone.c \
+		ft_lstclear.c \
+		ft_lstiter.c \
+		ft_lstmap.c \
 	 
 OBJS = $(SRCS:.c=.o)
-B_OBJS = $(SRCS:.c=.o)
+B_OBJS = $(B_SRCS:.c=.o)
 
 ifdef WITH_BONUS
 	OBJS += $(B_OBJS)
@@ -76,11 +76,11 @@ $(NAME) : $(OBJS)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBJS)
+	rm -f $(OBJS) $(B_OBJS)
 fclean: clean
-	rm -f $(NAME)
+	rm -f $(NAME) $(B_OBJS)
 
 bonus:
-	make WITH_BOUNUS=1
+	make WITH_BONUS=1
 
 re: fclean all
