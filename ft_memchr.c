@@ -6,7 +6,7 @@
 /*   By: nsakanou <nsakanou@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 11:52:15 by nsakanou          #+#    #+#             */
-/*   Updated: 2023/06/04 12:30:21 by nsakanou         ###   ########.fr       */
+/*   Updated: 2023/06/08 14:47:27 by nsakanou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,19 +31,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-
-/*
-#include <stdio.h>
-int main()
-{
-	char str[] = "42tokyo-test";
-	char *p;
-
-	p =ft_memchr(str, 'k', 12);
-	printf("%s\n", p);
-	printf("%d\n", p[0]);
-	p =memchr(str, 'k', 12);
-	printf("%s\n", p);
-	printf("%d\n", p[0]);
-}
-*/

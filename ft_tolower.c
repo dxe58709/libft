@@ -6,11 +6,11 @@
 /*   By: nsakanou <nsakanou@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 11:54:22 by nsakanou          #+#    #+#             */
-/*   Updated: 2023/05/22 17:28:48 by nsakanou         ###   ########.fr       */
+/*   Updated: 2023/06/08 15:41:54 by nsakanou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 int	ft_tolower(int c)
 {

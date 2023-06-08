@@ -6,7 +6,7 @@
 /*   By: nsakanou <nsakanou@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 11:54:26 by nsakanou          #+#    #+#             */
-/*   Updated: 2023/05/27 15:10:46 by nsakanou         ###   ########.fr       */
+/*   Updated: 2023/06/08 14:51:57 by nsakanou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,20 +29,3 @@ char	*ft_strrchr(const char *s, int c)
 		return ((char *)s);
 	return (memory);
 }
-/*
-#include <stdio.h>
-
-int	main()
-{
-	const char	*s = "libft-tokyo";
-	int	c;
-
-	printf("%s\n", strrchr(s, 'o'));
-	printf("%s\n", ft_strrchr(s, 'o'));
-
-	printf("%s\n", strrchr(s, '!'));
-	printf("%s\n", ft_strrchr(s, '!'));
-
-	printf("%s\n", strrchr(s, 't'));
-	printf("%s\n", ft_strrchr(s, 't'));
-}*/

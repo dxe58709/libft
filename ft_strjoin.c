@@ -6,11 +6,25 @@
 /*   By: nsakanou <nsakanou@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 15:01:01 by nsakanou          #+#    #+#             */
-/*   Updated: 2023/06/05 17:18:30 by nsakanou         ###   ########.fr       */
+/*   Updated: 2023/06/08 16:02:47 by nsakanou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static char	*ft_strcpy(char *dest, const char *src)
+{
+	size_t	i;
+
+	i = 0;
+	while (src[i])
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest);
+}
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
@@ -25,32 +39,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	new = (char *)malloc((s1_len + s2_len + 1) * sizeof(char));
 	if (new == NULL)
 		return (NULL);
-	size_t	i;
-	size_t	j;
-
-	i = 0;
-	while (i < s1_len)
-	{
-		new[i] = s1[i];
-		i++;
-	}
-	j = 0;
-	while (j < s2_len)
-	{
-		new[i + j] = s2[j];
-		j++;
-	}
-	new[i + j] = '\0';
+	ft_strcpy(new, s1);
+	ft_strcpy(new + s1_len, s2);
 	return (new);
 }
-
-// #include "stdio.h"
-
-// int	main()
-// {
-// 	char const	*s1 = "abcde";
-// 	char const	*s2 = "123456789";
-
-// 	printf("%s\n", ft_strjoin(s1, s2));
-// 	return (0);
-// }

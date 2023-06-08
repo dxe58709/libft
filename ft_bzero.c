@@ -6,7 +6,7 @@
 /*   By: nsakanou <nsakanou@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 11:53:55 by nsakanou          #+#    #+#             */
-/*   Updated: 2023/06/01 19:34:34 by nsakanou         ###   ########.fr       */
+/*   Updated: 2023/06/08 14:44:07 by nsakanou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,18 +25,3 @@ void	ft_bzero(void *s, size_t n)
 		i++;
 	}
 }
-
-// #include <stdio.h>
-
-// int main() {
-//     char str[] = "Hello, world!";
-//     size_t size = sizeof(str) - 1;  // 文字列のサイズ（終端のヌル文字を除く）
-
-//     printf("Before ft_bzero: %s\n", str);
-
-//     ft_bzero(str, size);
-
-//     printf("After ft_bzero: %s\n", str);
-
-//     return 0;
-// }
