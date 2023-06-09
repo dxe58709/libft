@@ -6,7 +6,7 @@
 /*   By: nsakanou <nsakanou@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 14:24:36 by nsakanou          #+#    #+#             */
-/*   Updated: 2023/06/08 16:02:27 by nsakanou         ###   ########.fr       */
+/*   Updated: 2023/06/09 16:13:57 by nsakanou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,6 @@ char	**ft_split(char const *s, char c)
 {
 	char	**new;
 	int		count;
-	size_t	i;
 	size_t	j;
 
 	if (!s)

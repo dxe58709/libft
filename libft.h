@@ -6,7 +6,7 @@
 /*   By: nsakanou <nsakanou@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 18:54:21 by nsakanou          #+#    #+#             */
-/*   Updated: 2023/06/08 14:43:47 by nsakanou         ###   ########.fr       */
+/*   Updated: 2023/06/09 17:33:47 by nsakanou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <unistd.h>
 # include <stddef.h>
 # include <string.h>
+# include <ctype.h>
 
 typedef struct s_list
 {

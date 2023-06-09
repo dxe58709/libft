@@ -6,13 +6,11 @@
 /*   By: nsakanou <nsakanou@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 10:15:24 by nsakanou          #+#    #+#             */
-/*   Updated: 2023/05/20 08:58:43 by nsakanou         ###   ########.fr       */
+/*   Updated: 2023/06/09 17:08:41 by nsakanou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isprint(int c)
 {
-	if (c >= 32 && c <= 126)
-		return (1);
-	return (0);
+	return (c >= 32 && c <= 126);
 }
