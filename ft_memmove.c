@@ -6,13 +6,13 @@
 /*   By: nsakanou <nsakanou@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 11:52:24 by nsakanou          #+#    #+#             */
-/*   Updated: 2023/06/08 16:00:25 by nsakanou         ###   ########.fr       */
+/*   Updated: 2023/06/11 13:14:43 by nsakanou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	judge(unsigned char *dst, unsigned char *src, size_t len)
+static void	copy(unsigned char *dst, unsigned char *src, size_t len)
 {
 	size_t	i;
 
@@ -46,6 +46,6 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	i = 0;
 	if (d == s)
 		return (d);
-	judge(d, s, len);
+	copy(d, s, len);
 	return (d);
 }
