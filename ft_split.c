@@ -6,7 +6,7 @@
 /*   By: nsakanou <nsakanou@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 14:24:36 by nsakanou          #+#    #+#             */
-/*   Updated: 2023/06/11 13:27:38 by nsakanou         ###   ########.fr       */
+/*   Updated: 2023/06/16 11:50:25 by nsakanou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,7 @@ char	**ft_split(char const *s, char c)
 
 
 // 以下、callocに直したバージョン（未完成）
-static void	creat_split(char **new, char const *s, char c, size_t j)
+/*static void	creat_split(char **new, char const *s, char c, size_t j)
 {
 	size_t	i;
 	size_t	start;
@@ -128,4 +128,4 @@ char	**ft_split(char const *s, char c)
 	j = 0;
 	creat_split(new, s, c, j);
 	return (new);
-}
+}*/
