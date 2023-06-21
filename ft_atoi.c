@@ -6,7 +6,7 @@
 /*   By: nsakanou <nsakanou@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 11:53:50 by nsakanou          #+#    #+#             */
-/*   Updated: 2023/06/08 14:44:00 by nsakanou         ###   ########.fr       */
+/*   Updated: 2023/06/04 14:28:09 by nsakanou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,3 +54,12 @@ int	ft_atoi(const char *str)
 	}
 	return (nb * count);
 }
+
+// int main()
+// {
+// 	char *n = "\t\v\f\r\n \f-06050";
+// 	int ex = atoi(n);
+// 	int ac = ft_atoi(n);
+
+// 	printf("ex: %d\nac: %d\n", ex, ac);
+// }

@@ -6,11 +6,11 @@
 /*   By: nsakanou <nsakanou@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 11:54:46 by nsakanou          #+#    #+#             */
-/*   Updated: 2023/06/08 15:41:39 by nsakanou         ###   ########.fr       */
+/*   Updated: 2023/05/22 16:58:01 by nsakanou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <unistd.h>
 
 int	ft_toupper(int c)
 {
@@ -20,3 +20,13 @@ int	ft_toupper(int c)
 	}
 	return (c);
 }
+
+// #include <stdio.h>
+// int	main(void)
+// {
+// 	int	c;
+
+// 	c = ft_toupper('K');
+// 	printf("%c\n", c);
+// 	return (0);
+// }

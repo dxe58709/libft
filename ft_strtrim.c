@@ -6,11 +6,13 @@
 /*   By: nsakanou <nsakanou@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 15:01:37 by nsakanou          #+#    #+#             */
-/*   Updated: 2023/06/08 15:42:10 by nsakanou         ###   ########.fr       */
+/*   Updated: 2023/06/04 15:04:16 by nsakanou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
+#include <assert.h>
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
@@ -38,3 +40,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 	new[len] = '\0';
 	return (new);
 }
+
+// int main()
+// {
+// 	char *result = ft_strtrim("hello world", "abcdefghijklmnopqrstuvwxyz");
+// 	printf("%s\n", result);
+// }

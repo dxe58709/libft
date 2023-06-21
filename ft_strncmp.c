@@ -6,7 +6,7 @@
 /*   By: nsakanou <nsakanou@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 11:54:24 by nsakanou          #+#    #+#             */
-/*   Updated: 2023/06/08 14:51:01 by nsakanou         ###   ########.fr       */
+/*   Updated: 2023/06/05 16:45:50 by nsakanou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,3 +25,21 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }
+
+/*
+#include <stdio.h>
+
+int	main()
+{
+	char *str = "libft-42tokyo";
+	printf("%d\n", strncmp(str,"libft", 5));
+	printf("%d\n", ft_strncmp(str,"libft", 5));
+
+	printf("%d\n", strncmp(str,"i", 5));
+	printf("%d\n", ft_strncmp(str,"i", 5));
+
+	printf("%d\n", strncmp(str,"libft-42tokyoi", 15));
+	printf("%d\n", ft_strncmp(str,"libft-42tokyoi", 15));
+
+}
+*/

@@ -6,7 +6,7 @@
 /*   By: nsakanou <nsakanou@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 11:52:22 by nsakanou          #+#    #+#             */
-/*   Updated: 2023/06/08 14:47:35 by nsakanou         ###   ########.fr       */
+/*   Updated: 2023/06/05 16:30:11 by nsakanou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,3 +30,15 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	}
 	return (dst);
 }
+/*
+#include <stdio.h>
+
+int	main()
+{
+	char s1[] = "abcdefg";
+	char s2[] = "123";
+
+	printf("%s\n", memcpy(s1, s2, sizeof(s2)-1));
+	printf("%s\n", ft_memcpy(s1, s2, sizeof(s2)-1));
+}
+*/
