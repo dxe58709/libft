@@ -6,7 +6,7 @@
 /*   By: nsakanou <nsakanou@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 11:52:15 by nsakanou          #+#    #+#             */
-/*   Updated: 2023/06/04 12:30:21 by nsakanou         ###   ########.fr       */
+/*   Updated: 2023/06/09 14:26:36 by nsakanou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	ptr = (unsigned char *)s;
 	chr = (unsigned char)c;
 	i = 0;
-	if (!n)
+	if (n == 0)
 		return (NULL);
-	while (i < n || !c)
+	while (i < n)
 	{
 		if (ptr[i] == chr)
 			return (ptr + i);
@@ -31,19 +31,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-
-/*
-#include <stdio.h>
-int main()
-{
-	char str[] = "42tokyo-test";
-	char *p;
-
-	p =ft_memchr(((void *)0), '\0', 0x20);
-	printf("%s\n", p);
-	printf("%d\n", p[0]);
-	p =memchr(((void *)0), '\0', 0x20);
-	printf("%s\n", p);
-	printf("%d\n", p[0]);
-}
-*/

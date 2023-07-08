@@ -6,7 +6,7 @@
 /*   By: nsakanou <nsakanou@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 18:54:21 by nsakanou          #+#    #+#             */
-/*   Updated: 2023/06/05 20:51:24 by nsakanou         ###   ########.fr       */
+/*   Updated: 2023/06/09 17:33:47 by nsakanou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,13 @@
 # include <unistd.h>
 # include <stddef.h>
 # include <string.h>
+# include <ctype.h>
 
 typedef struct s_list
 {
-	void		*content;
+	void			*content;
 	struct s_list	*next;
 }t_list;
-
 
 int		ft_isalpha(int c);
 int		ft_isascii(int c);
